@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "1778a621-38cb-438c-abc9-78c06dfc1946",
+		"name": "Trello API LaunchX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Board",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://api.trello.com/1/boards/?name=LaunchX&key=mykey&token=mytoken",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "LaunchX"
+						},
+						{
+							"key": "key",
+							"value": "mykey"
+						},
+						{
+							"key": "token",
+							"value": "mytoken"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Board by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/boards/{boardId}?key=mykey&token=mytoken",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"{boardId}"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "mykey"
+						},
+						{
+							"key": "token",
+							"value": "mytoken"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Lists of Cards by Board ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/boards/{boardId}/lists?key=mykey&token=mytoken",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"{boardId}",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "mykey"
+						},
+						{
+							"key": "token",
+							"value": "mytoken"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Card By List Id ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/cards?idList=myIdlist&key=mykey&token=mytoken&name=Agregando una nueva card otra y otro",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "myIdlist"
+						},
+						{
+							"key": "key",
+							"value": "mykey"
+						},
+						{
+							"key": "token",
+							"value": "mytoken"
+						},
+						{
+							"key": "name",
+							"value": "Agregando una nueva card otra y otro"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update card",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://api.trello.com/1/cards/{id}?key=myKey&token=myToken&name=nuevoNombre",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"{id}"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "myKey"
+						},
+						{
+							"key": "token",
+							"value": "myToken"
+						},
+						{
+							"key": "name",
+							"value": "nuevoNombre"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete card",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://api.trello.com/1/cards/{id}?key=mykey&token=mytoken",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"{id}"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "mykey"
+						},
+						{
+							"key": "token",
+							"value": "mytoken"
+						},
+						{
+							"key": "name",
+							"value": "nuevoNombre",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "dec898c2-68eb-4a4e-ba7c-dc52bdf432aa",
+			"key": "boardId",
+			"value": "62625f5f78af597b71f391de",
+			"type": "string"
+		}
+	]
+}
